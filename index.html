@@ -1,0 +1,525 @@
+import React, { useState, useEffect } from 'react';
+import { 
+  Menu, X, BarChart2, Globe, Target, Zap, 
+  Users, TrendingUp, Search, MessageCircle, 
+  CheckCircle2, ArrowRight, Star, ChevronRight,
+  Award, ShieldCheck, Rocket, PieChart, 
+  Layers, MousePointer2, Briefcase, Play,
+  DollarSign, Activity, Home, ShoppingBag, 
+  Smartphone, Palette, Dices, Layout, Send
+} from 'lucide-react';
+
+const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeFaq, setActiveFaq] = useState(null);
+
+  // Smooth scroll and navbar styling
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Block scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMenuOpen]);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Updated to open Telegram Link
+  const openTelegram = () => {
+    window.open('https://t.me/krishnathakurads', '_blank');
+  };
+
+  const services = [
+    {
+      title: "Forex Market",
+      icon: <DollarSign className="w-6 h-6" />,
+      description: "Expert analysis and currency trading strategies for global markets.",
+      tags: ["Currency", "Trading"]
+    },
+    {
+      title: "Binary Trading",
+      icon: <Activity className="w-6 h-6" />,
+      description: "High-frequency trading signals and risk management systems.",
+      tags: ["Options", "Signals"]
+    },
+    {
+      title: "Stock Market",
+      icon: <BarChart2 className="w-6 h-6" />,
+      description: "Equity portfolio management and long-term market insights.",
+      tags: ["Equities", "Investing"]
+    },
+    {
+      title: "Crypto Trading",
+      icon: <Zap className="w-6 h-6" />,
+      description: "Digital asset investment strategies and blockchain trend analysis.",
+      tags: ["Blockchain", "Crypto"]
+    },
+    {
+      title: "Real Estate Business",
+      icon: <Home className="w-6 h-6" />,
+      description: "Strategic property investment and commercial real estate consulting.",
+      tags: ["Assets", "Property"]
+    },
+    {
+      title: "E-commerce",
+      icon: <ShoppingBag className="w-6 h-6" />,
+      description: "Building scalable online stores and optimizing sales funnels.",
+      tags: ["Online Sales", "Retail"]
+    },
+    {
+      title: "Digital Product",
+      icon: <Smartphone className="w-6 h-6" />,
+      description: "Creation, marketing, and launch strategies for digital assets.",
+      tags: ["Software", "Content"]
+    },
+    {
+      title: "Colour Trading",
+      icon: <Palette className="w-6 h-6" />,
+      description: "Strategic color prediction analysis and gaming insights.",
+      tags: ["Analysis", "Prediction"]
+    },
+    {
+      title: "Satka Matka",
+      icon: <Dices className="w-6 h-6" />,
+      description: "Statistical analysis and probability calculation for number games.",
+      tags: ["Numerology", "Games"]
+    },
+    {
+      title: "LANDING PAGE",
+      icon: <Layout className="w-6 h-6" />,
+      description: "High-converting web design and development for maximum ROI.",
+      tags: ["Web Design", "CRO"]
+    }
+  ];
+
+  const pricing = [
+    {
+      name: "15 Days Ads Plan",
+      price: "₹6,500",
+      period: "/15 days",
+      desc: "Perfect for testing campaigns and short-term boosts.",
+      features: ["Facebook & Instagram Ads", "Target Audience Research", "1 Campaign Setup", "Basic Ad Creatives", "Performance Reporting"],
+      highlight: false
+    },
+    {
+      name: "30 Days Ads Plan",
+      price: "₹10,000",
+      period: "/30 days",
+      desc: "Comprehensive monthly management for scaling results.",
+      features: ["Omni-channel Ads Mgmt", "Advanced Pixel Setup", "A/B Testing", "Retargeting Campaigns", "Weekly Strategy Calls", "24/7 Support"],
+      highlight: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      desc: "Full-service departmental outsource.",
+      features: ["CMO-level Strategy", "Full Content Studio", "Custom Tech Stack", "Daily Optimization", "24/7 Priority Support", "PR & Crisis Mgmt"],
+      highlight: false
+    }
+  ];
+
+  return (
+    <div className="font-sans text-slate-900 bg-slate-50 selection:bg-orange-500 selection:text-white overflow-x-hidden">
+      
+      {/* Telegram FAB */}
+      <div className="fixed bottom-6 right-6 z-50 group">
+        <button 
+          onClick={openTelegram}
+          className="bg-[#0088cc] hover:bg-[#0077b5] text-white rounded-full p-4 shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 flex items-center gap-3 active:scale-95 ring-4 ring-white/20 backdrop-blur-sm"
+          aria-label="Join Telegram"
+        >
+          <Send className="w-6 h-6" />
+          <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap font-bold">Join Channel</span>
+        </button>
+      </div>
+
+      {/* Navigation - Floating Glass */}
+      <nav className={`fixed w-full z-40 transition-all duration-500 ${scrolled ? 'py-4' : 'py-6'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`
+            backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl px-6 py-4 flex justify-between items-center transition-all duration-500
+            ${scrolled ? 'bg-slate-900/90' : 'bg-slate-900/50'}
+          `}>
+            {/* Logo */}
+            <div className="flex items-center gap-3 group cursor-pointer">
+              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+                <TrendingUp className="text-white w-6 h-6" />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-black text-xl leading-none text-white tracking-tight uppercase">KRISHNA THAKUR</span>
+              </div>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {['Solutions', 'Pricing', 'FAQ'].map((item) => (
+                <a 
+                  key={item} 
+                  href={`#${item.toLowerCase()}`}
+                  className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
+                >
+                  {item}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all group-hover:w-full"></span>
+                </a>
+              ))}
+              <div className="h-6 w-px bg-slate-700 mx-2"></div>
+              <button 
+                onClick={openTelegram}
+                className="bg-white text-slate-900 px-6 py-2.5 rounded-xl text-sm font-bold transition-all hover:bg-orange-50 hover:scale-105 active:scale-95"
+              >
+                Book Audit
+              </button>
+            </div>
+
+            {/* Mobile Toggle */}
+            <button 
+              onClick={toggleMenu} 
+              className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Sidebar */}
+      <div className={`fixed inset-0 z-50 bg-slate-950 transition-transform duration-500 lg:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="flex flex-col h-full p-8">
+          <div className="flex justify-between items-center mb-16">
+            <span className="font-black text-2xl tracking-tighter text-white uppercase">KRISHNA THAKUR</span>
+            <button onClick={toggleMenu} className="p-2 text-slate-400 hover:text-white"><X className="w-8 h-8" /></button>
+          </div>
+          <div className="space-y-6 flex-1">
+            {['Solutions', 'Pricing', 'FAQ'].map((item) => (
+              <a 
+                key={item} 
+                href={`#${item.toLowerCase()}`} 
+                onClick={toggleMenu} 
+                className="flex items-center justify-between group border-b border-slate-800 pb-4"
+              >
+                <span className="text-3xl font-bold text-slate-400 group-hover:text-white transition-colors">{item}</span>
+                <ArrowRight className="text-slate-600 group-hover:text-orange-500 -translate-x-4 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              </a>
+            ))}
+          </div>
+          <button onClick={() => { toggleMenu(); openTelegram(); }} className="w-full bg-gradient-to-r from-orange-600 to-red-600 py-4 rounded-xl font-bold text-white shadow-lg shadow-orange-900/50">
+            Start Your Growth
+          </button>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center pt-32 pb-20 bg-slate-950 overflow-hidden">
+        {/* Abstract Background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange-600/20 rounded-full blur-[120px] mix-blend-screen opacity-50 animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px] mix-blend-screen opacity-50"></div>
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+          <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.1}}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Content */}
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 mb-8 backdrop-blur-md">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                </span>
+                <span className="text-[11px] font-bold uppercase tracking-widest">Accepting New Clients</span>
+              </div>
+              
+              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-8">
+                Data Driven.<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-red-500">Creative Led.</span>
+              </h1>
+              
+              <p className="text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
+                We don't just run ads. We engineer <span className="text-white font-medium">growth ecosystems</span> that scale revenue, dominate search, and build lasting brand equity.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-16">
+                <button onClick={openTelegram} className="group relative px-8 py-4 bg-[#0088cc] text-white font-bold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/30">
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <span className="relative flex items-center gap-2">
+                    Join Telegram Channel <Send className="w-4 h-4" />
+                  </span>
+                </button>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="border-t border-slate-800 pt-8">
+                <div className="flex gap-6 items-center justify-center lg:justify-start">
+                   <div className="text-xl font-bold text-slate-500 uppercase tracking-widest">
+                     150 + Telegram Channel
+                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Visual Abstract Visualization */}
+            <div className="hidden lg:block relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-red-600 rounded-[2rem] blur opacity-30"></div>
+              <div className="relative bg-slate-900 border border-slate-800 rounded-[2rem] p-8 shadow-2xl overflow-hidden">
+                {/* Header */}
+                <div className="flex justify-between items-center mb-8 border-b border-slate-800 pb-4">
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500"></div>
+                  </div>
+                  <div className="text-xs font-mono text-slate-500">live_campaign_v2.json</div>
+                </div>
+
+                {/* Metrics Grid */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-slate-950/50 p-4 rounded-xl border border-slate-800">
+                    <div className="flex justify-between items-start mb-2">
+                      <PieChart className="text-orange-500 w-5 h-5" />
+                      <span className="text-green-500 text-xs font-bold">+24%</span>
+                    </div>
+                    <div className="text-2xl font-black text-white">4.8x</div>
+                    <div className="text-slate-500 text-[10px] uppercase font-bold">ROAS</div>
+                  </div>
+                  <div className="bg-slate-950/50 p-4 rounded-xl border border-slate-800">
+                    <div className="flex justify-between items-start mb-2">
+                      <Users className="text-blue-500 w-5 h-5" />
+                      <span className="text-green-500 text-xs font-bold">+12%</span>
+                    </div>
+                    <div className="text-2xl font-black text-white">85k</div>
+                    <div className="text-slate-500 text-[10px] uppercase font-bold">Leads</div>
+                  </div>
+                </div>
+
+                {/* Graph Representation */}
+                <div className="bg-slate-950/50 rounded-xl border border-slate-800 p-4 h-48 flex items-end justify-between gap-2">
+                   {[40, 65, 55, 80, 70, 90, 85, 95, 100].map((h, i) => (
+                     <div key={i} className="w-full bg-gradient-to-t from-orange-600/80 to-orange-400 rounded-t-sm hover:opacity-100 opacity-80 transition-all duration-300 relative group" style={{height: `${h}%`}}>
+                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-slate-900 text-[9px] font-bold px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                          {h}%
+                        </div>
+                     </div>
+                   ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Marquee Scroller */}
+      <div className="bg-orange-600 py-3 overflow-hidden transform -skew-y-1">
+        <div className="flex whitespace-nowrap animate-marquee">
+          {[...Array(10)].map((_, i) => (
+            <div key={i} className="flex items-center mx-8">
+              <span className="text-white font-black text-sm uppercase tracking-widest">Growth Hacking</span>
+              <Star className="w-3 h-3 text-orange-200 mx-4 fill-current" />
+              <span className="text-white font-black text-sm uppercase tracking-widest">Brand Strategy</span>
+              <Star className="w-3 h-3 text-orange-200 mx-4 fill-current" />
+              <span className="text-white font-black text-sm uppercase tracking-widest">Media Buying</span>
+              <Star className="w-3 h-3 text-orange-200 mx-4 fill-current" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Services Bento Grid */}
+      <section id="solutions" className="py-24 bg-slate-50 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div>
+              <h2 className="text-orange-600 font-black uppercase tracking-widest text-xs mb-3">Our Expertise</h2>
+              <h3 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">Our Services</h3>
+            </div>
+            <p className="max-w-md text-slate-500 leading-relaxed text-sm md:text-base">
+              We deploy a unified strategy across all channels. No silos. Just a single cohesive machine driving revenue.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div 
+                key={index} 
+                className="group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-100 shadow-xl shadow-slate-200/50 hover:shadow-orange-500/10 transition-all duration-500 flex flex-col relative overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-slate-50 rounded-bl-[100px] -mr-4 -mt-4 transition-all group-hover:bg-orange-50"></div>
+                
+                <div className="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-6 relative z-10 transition-transform group-hover:scale-110 group-hover:bg-orange-600 duration-500">
+                  {React.cloneElement(service.icon, { strokeWidth: 1.5 })}
+                </div>
+                
+                <h4 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">{service.title}</h4>
+                <p className="text-sm text-slate-500 mb-8 leading-relaxed flex-grow">
+                  {service.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {service.tags.map(tag => (
+                    <span key={tag} className="px-3 py-1 bg-slate-50 border border-slate-100 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-wide">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-orange-600 font-black uppercase tracking-widest text-xs mb-3">Pricing Models</h2>
+            <h3 className="text-4xl font-black text-slate-900 tracking-tight mb-4">Transparent Investment.</h3>
+            <p className="text-slate-500">Choose the engagement model that fits your growth stage.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((tier, index) => (
+              <div 
+                key={index} 
+                className={`
+                  relative p-8 rounded-3xl transition-all duration-300
+                  ${tier.highlight 
+                    ? 'bg-slate-900 text-white shadow-2xl scale-105 z-10' 
+                    : 'bg-white text-slate-900 border border-slate-200 hover:border-orange-200'
+                  }
+                `}
+              >
+                {tier.highlight && (
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-orange-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
+                    Most Popular
+                  </div>
+                )}
+                
+                <h4 className={`text-xl font-bold mb-2 ${tier.highlight ? 'text-white' : 'text-slate-900'}`}>{tier.name}</h4>
+                <p className={`text-sm mb-6 h-10 ${tier.highlight ? 'text-slate-400' : 'text-slate-500'}`}>{tier.desc}</p>
+                
+                <div className="mb-8">
+                  <span className="text-4xl font-black">{tier.price}</span>
+                  <span className={`text-sm ${tier.highlight ? 'text-slate-500' : 'text-slate-400'}`}>{tier.period}</span>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  {tier.features.map((feature, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <CheckCircle2 className={`w-5 h-5 flex-shrink-0 ${tier.highlight ? 'text-orange-500' : 'text-slate-900'}`} />
+                      <span className={`text-sm font-medium ${tier.highlight ? 'text-slate-300' : 'text-slate-600'}`}>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <button 
+                  onClick={openTelegram}
+                  className={`
+                  w-full py-4 rounded-xl font-bold text-sm transition-all
+                  ${tier.highlight 
+                    ? 'bg-orange-600 text-white hover:bg-orange-700 shadow-lg shadow-orange-900/20' 
+                    : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
+                  }
+                `}>
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-24 bg-white border-t border-slate-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+           <h3 className="text-3xl font-black text-slate-900 text-center mb-12">Common Questions</h3>
+           <div className="space-y-4">
+             {[
+               { q: "Do you guarantee results?", a: "We guarantee the inputs and the strategy. While no agency can ethically guarantee algorithmic results, our performance-based pricing models align our incentives with yours." },
+               { q: "What is your minimum contract length?", a: "We typically work on 3-month sprints. Real growth takes time to compound, and we want partners who are invested in long-term value." },
+               { q: "Do you handle creative production?", a: "Yes. We have an in-house studio for high-performance UGC, static ads, and motion graphics specifically designed to convert." }
+             ].map((item, i) => (
+               <div key={i} className="border border-slate-200 rounded-2xl overflow-hidden">
+                 <button 
+                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
+                   className="w-full flex justify-between items-center p-6 bg-slate-50 hover:bg-slate-100 transition-colors text-left"
+                 >
+                   <span className="font-bold text-slate-900">{item.q}</span>
+                   <ChevronRight className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${activeFaq === i ? 'rotate-90' : ''}`} />
+                 </button>
+                 <div className={`transition-all duration-300 overflow-hidden ${activeFaq === i ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                   <div className="p-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                     {item.a}
+                   </div>
+                 </div>
+               </div>
+             ))}
+           </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-950 py-16 text-slate-400 text-sm border-t border-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="grid md:grid-cols-4 gap-12 mb-16">
+             <div className="col-span-1 md:col-span-2">
+                 <div className="flex items-center gap-2 mb-6">
+                   <div className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white">
+                     <TrendingUp className="w-5 h-5" />
+                   </div>
+                   <span className="text-xl font-black text-white tracking-tight uppercase">KRISHNA THAKUR</span>
+                 </div>
+                 <p className="max-w-sm mb-6">Redefining performance marketing for the modern enterprise. We build systems that scale.</p>
+                 <div className="flex gap-4">
+                   {[Search, Globe, Users].map((Icon, i) => (
+                     <div key={i} className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-colors cursor-pointer">
+                       <Icon className="w-5 h-5" />
+                     </div>
+                   ))}
+                 </div>
+             </div>
+             <div>
+               <h4 className="text-white font-bold mb-6">Services</h4>
+               <ul className="space-y-4">
+                 <li className="hover:text-orange-500 cursor-pointer transition-colors">Paid Acquisition</li>
+                 <li className="hover:text-orange-500 cursor-pointer transition-colors">SEO & Content</li>
+                 <li className="hover:text-orange-500 cursor-pointer transition-colors">Conversion Rate</li>
+                 <li className="hover:text-orange-500 cursor-pointer transition-colors">Analytics</li>
+               </ul>
+             </div>
+             <div>
+               <h4 className="text-white font-bold mb-6">Company</h4>
+               <ul className="space-y-4">
+                 <li className="hover:text-orange-500 cursor-pointer transition-colors">About Us</li>
+                 <li className="hover:text-orange-500 cursor-pointer transition-colors">Case Studies</li>
+                 <li className="hover:text-orange-500 cursor-pointer transition-colors">Careers</li>
+                 <li className="hover:text-orange-500 cursor-pointer transition-colors">Contact</li>
+               </ul>
+             </div>
+           </div>
+           <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+             <div>&copy; 2024 Krishna Thakur. All rights reserved.</div>
+             <div className="flex gap-8">
+                 <span className="hover:text-white cursor-pointer">Privacy Policy</span>
+                 <span className="hover:text-white cursor-pointer">Terms of Service</span>
+             </div>
+           </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
