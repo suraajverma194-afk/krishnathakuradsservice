@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Menu, X, BarChart2, Globe, Target, Zap, 
-  Users, TrendingUp, Search, MessageCircle, 
+  Menu, X, BarChart2, Globe, Zap, 
+  Users, TrendingUp, Search, 
   CheckCircle2, ArrowRight, Star, ChevronRight,
-  Award, ShieldCheck, Rocket, PieChart, 
-  Layers, MousePointer2, Briefcase, Play,
-  DollarSign, Activity, Home, ShoppingBag, 
+  PieChart, DollarSign, Activity, Home, ShoppingBag, 
   Smartphone, Palette, Dices, Layout, Send
 } from 'lucide-react';
 
@@ -131,7 +129,16 @@ const App = () => {
 
   return (
     <div className="font-sans text-slate-900 bg-slate-50 selection:bg-orange-500 selection:text-white overflow-x-hidden">
-      
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+        }
+      `}</style>
+
       {/* Telegram FAB */}
       <div className="fixed bottom-6 right-6 z-50 group">
         <button 
@@ -244,8 +251,8 @@ const App = () => {
               </div>
               
               <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-8">
-                Data Driven.<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-red-500">Creative Led.</span>
+                Market Number No.1<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-red-500">Telegram Ads Service</span>
               </h1>
               
               <p className="text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
@@ -324,7 +331,7 @@ const App = () => {
       {/* Marquee Scroller */}
       <div className="bg-orange-600 py-3 overflow-hidden transform -skew-y-1">
         <div className="flex whitespace-nowrap animate-marquee">
-          {[...Array(10)].map((_, i) => (
+          {[...Array(20)].map((_, i) => (
             <div key={i} className="flex items-center mx-8">
               <span className="text-white font-black text-sm uppercase tracking-widest">Growth Hacking</span>
               <Star className="w-3 h-3 text-orange-200 mx-4 fill-current" />
