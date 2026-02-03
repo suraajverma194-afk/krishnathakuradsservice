@@ -1,447 +1,357 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna Thakur | Market No. 1 Telegram Ads Service</title>
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
+    <title>Divya Roy ✅</title>
+
+   <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Changed Background Color to Dark Purple/Red Gradient as requested */
+        background: linear-gradient(135deg, #1f0814 0%, #4a0d28 50%, #290818 100%);
+        background-size: 200% 200%;
+        animation: gradientShift 15s ease infinite;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+
+    .container {
+        max-width: 420px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        animation: fadeInUp 0.8s ease-out;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .profile-img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        /* Changed Border Color to Pink */
+        border: 3px solid #ec4899; 
+        object-fit: cover;
+        background: #fff;
+        /* Changed Shadow Color */
+        box-shadow: 0 0 25px rgba(236, 72, 153, 0.6);
+        display: block;
+    }
+
+    .status-dot {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 18px;
+        height: 18px;
+        /* Changed Dot Color to Pink */
+        background: #ec4899; 
+        border-radius: 50%;
+        border: 3px solid white;
+        animation: blink 2s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+
+    h1 {
+        /* Changed Text Color to Pink */
+        color: #ec4899; 
+        font-size: 1.5rem;
+        font-weight: 700;
+        /* Changed Shadow Color */
+        text-shadow: 0 0 15px rgba(236, 72, 153, 0.5); 
+        line-height: 1.3;
+        margin: 4px 0;
+    }
+
+    .subtitle {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin: 4px 0;
+    }
+
+    .subtitle::before {
+        content: "✓";
+        /* Changed Checkmark Color */
+        color: #ec4899; 
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .badges {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 4px 0;
+    }
+
+    .badge {
+        /* Changed Badge Background */
+        background: rgba(236, 72, 153, 0.2); 
+        /* Changed Badge Text Color */
+        color: #ec4899; 
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        /* Changed Badge Border */
+        border: 1px solid rgba(236, 72, 153, 0.35); 
+    }
+
+    .telegram-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        /* Changed Button Gradient to Pink/Rose */
+        background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); 
+        color: #ffffff;
+        padding: 14px 32px;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 1rem;
+        /* Changed Shadow */
+        box-shadow: 0 4px 20px rgba(236, 72, 153, 0.5); 
+        transition: all 0.3s ease;
+        text-decoration: none;
+        margin: 8px 0;
+    }
+
+    .telegram-btn:hover {
+        transform: translateY(-2px);
+        /* Changed Hover Shadow */
+        box-shadow: 0 6px 30px rgba(236, 72, 153, 0.7); 
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 8px 0;
+    }
+
+    .feature-card {
+        /* Changed Card Background */
+        background: rgba(83, 24, 49, 0.6); 
+        color: #ffffff;
+        backdrop-filter: blur(10px);
+        border-radius: 14px;
+        padding: 14px 16px;
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        /* Changed Card Border */
+        border: 1px solid rgba(236, 72, 153, 0.3); 
+        transition: all 0.3s ease;
+        text-align: left;
+    }
+
+    .feature-card:hover {
+        /* Changed Hover Border */
+        border-color: #ec4899; 
+        /* Changed Hover Shadow */
+        box-shadow: 0 0 15px rgba(236, 72, 153, 0.35); 
+        transform: translateY(-2px);
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Changed Icon Background */
+        background: rgba(236, 72, 153, 0.2); 
+        border-radius: 12px;
+    }
+
+    .feature-content {
+        flex: 1;
+    }
+
+    .feature-content h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #ffffff;
+        line-height: 1.3;
+    }
+
+    .feature-content p {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .footer-banner {
+        /* Changed Banner Gradient to Pink/Rose */
+        background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); 
+        border-radius: 14px;
+        padding: 14px 16px;
+        /* Changed Banner Shadow */
+        box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4); 
+        margin-top: 8px;
+    }
+
+    .footer-banner h2 {
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 4px;
+        line-height: 1.3;
+    }
+
+    .footer-banner p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            gap: 14px;
         }
 
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        
-        .animate-marquee {
-            animation: marquee 25s linear infinite;
-            display: flex;
-            width: max-content;
+        h1 {
+            font-size: 1.3rem;
         }
 
-        .glass-nav {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .subtitle {
+            font-size: 0.85rem;
         }
 
-        .hero-gradient {
-            background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.15), transparent),
-                        radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.1), transparent);
-        }
-        
-        .faq-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        .telegram-btn {
+            padding: 12px 28px;
+            font-size: 0.95rem;
         }
 
-        .faq-item.active .faq-content {
-            max-height: 200px;
-            padding-top: 1.5rem;
+        .feature-card {
+            padding: 12px 14px;
         }
 
-        .faq-item.active .faq-chevron {
-            transform: rotate(90deg);
+        .feature-icon {
+            width: 45px;
+            height: 45px;
+            font-size: 1.8rem;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
+        .feature-content h3 {
+            font-size: 0.9rem;
         }
-    </style>
+
+        .feature-content p {
+            font-size: 0.75rem;
+        }
+    }
+</style>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1395526048680012');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1395526048680012&ev=PageView&noscript=1"
+/></noscript>
 </head>
-<body class="text-slate-900 bg-slate-50 selection:bg-orange-500 selection:text-white overflow-x-hidden">
 
-    <!-- WhatsApp FAB (Previously Telegram) -->
-    <div class="fixed bottom-6 right-6 z-50 group">
-        <a href="https://api.whatsapp.com/send?phone=916375295905&text=Hello%20Krishna%20!" target="_blank" class="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-4 shadow-2xl hover:shadow-green-500/40 transition-all duration-300 flex items-center gap-3 active:scale-95 ring-4 ring-white/20 backdrop-blur-sm">
-            <!-- WhatsApp SVG Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="images/image.png" alt="Profile" class="profile-img">
+            <div class="status-dot"></div>
+        </div>
+
+        <h1>Divya Roy ✅</h1>
+
+        <div class="subtitle">Trusted by thousands of customer</div>
+
+        <div class="badges">
+            <span class="badge">24/7 open</span>
+            <span class="badge">full fun</span>
+        </div>
+
+        <a href="https://telegram.me/Divyaroy_01?text=Hello%20Divya%20Service%20!%20" class="telegram-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.894 8.927c-.141.637-.516.793-1.046.494l-2.888-2.13-1.393 1.34c-.154.154-.283.283-.581.283l.207-2.958 5.338-4.824c.232-.207-.051-.322-.36-.115L8.893 13.617l-2.846-.891c-.619-.194-.632-.619.13-.916l11.12-4.286c.516-.194.968.115.799.916z"></path>
             </svg>
-            <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap font-bold">Message Now</span>
+            Join on Telegram
         </a>
-    </div>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-40 transition-all duration-500 py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-nav rounded-2xl px-6 py-4 flex justify-between items-center">
-                <!-- Logo -->
-                <div class="flex items-center gap-3 cursor-pointer">
-                    <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
-                        <i data-lucide="trending-up" class="text-white w-6 h-6"></i>
-                    </div>
-                    <span class="font-black text-xl leading-none text-white tracking-tight uppercase">KRISHNA THAKUR</span>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <div class="feature-content">
+                    <h3>AC room included</h3>
                 </div>
+            </div>
 
-                <!-- Desktop Nav -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#solutions" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Solutions</a>
-                    <a href="#pricing" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Pricing</a>
-                    <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
-                    <div class="h-6 w-px bg-slate-700 mx-2"></div>
-                    <a href="https://t.me/+DP5QVdiG5nJiOWZl" target="_blank" class="bg-white text-slate-900 px-6 py-2.5 rounded-xl text-sm font-bold transition-all hover:bg-orange-50 hover:scale-105 active:scale-95">
-                        Join Telegram
-                    </a>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <div class="feature-content">
+                    <h3>All type service & girls available</h3>
                 </div>
+            </div>
 
-                <!-- Mobile Toggle -->
-                <button onclick="toggleMenu()" class="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors">
-                    <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
-                </button>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <div class="feature-content">
+                    <h3>Girl's age will be 18 to 35 all type</h3>
+                </div>
             </div>
         </div>
-    </nav>
 
-    <!-- Mobile Sidebar -->
-    <div id="mobile-menu" class="fixed inset-0 z-50 bg-slate-950 transition-transform duration-500 lg:hidden translate-x-full">
-        <div class="flex flex-col h-full p-8">
-            <div class="flex justify-between items-center mb-16">
-                <span class="font-black text-2xl tracking-tighter text-white uppercase">KRISHNA THAKUR</span>
-                <button onclick="toggleMenu()" class="p-2 text-slate-400 hover:text-white">
-                    <i data-lucide="x" class="w-8 h-8"></i>
-                </button>
-            </div>
-            <div class="space-y-6 flex-1 text-white">
-                <a href="#solutions" onclick="toggleMenu()" class="block text-3xl font-bold text-slate-400 hover:text-white py-4 border-b border-slate-800">Solutions</a>
-                <a href="#pricing" onclick="toggleMenu()" class="block text-3xl font-bold text-slate-400 hover:text-white py-4 border-b border-slate-800">Pricing</a>
-                <a href="#faq" onclick="toggleMenu()" class="block text-3xl font-bold text-slate-400 hover:text-white py-4 border-b border-slate-800">FAQ</a>
-            </div>
-            <a href="https://t.me/+DP5QVdiG5nJiOWZl" target="_blank" class="w-full bg-gradient-to-r from-orange-600 to-red-600 py-4 rounded-xl font-bold text-white text-center shadow-lg shadow-orange-900/50">
-                Start Your Growth
-            </a>
+        <div class="footer-banner">
+            <h2>⭐ Advertised by Krishna Thakur⭐</h2>
+            <p>Telegram Id { For Advertising } - @KrishnaThakurAds</p>
         </div>
     </div>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-32 pb-20 bg-slate-950 overflow-hidden hero-gradient">
-        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center lg:text-left">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 mb-8">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                        </span>
-                        <span class="text-[11px] font-bold uppercase tracking-widest">Active & Delivering Results</span>
-                    </div>
-                    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-8">
-                        Market Number No.1<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-red-500">Telegram Ads Expert</span>
-                    </h1>
-                    <p class="text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
-                        Specialized Telegram marketing for high-risk and high-growth sectors. We scale your brand where others fail.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-16">
-                        <a href="https://t.me/+DP5QVdiG5nJiOWZl" target="_blank" class="px-8 py-4 bg-[#0088cc] text-white font-bold rounded-full hover:scale-105 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2">
-                            Join Telegram Channel <i data-lucide="send" class="w-4 h-4"></i>
-                        </a>
-                        <a href="#solutions" class="px-8 py-4 bg-white/5 text-white font-bold rounded-full hover:bg-white/10 transition-all border border-white/10 flex items-center justify-center gap-2">
-                            View Services <i data-lucide="chevron-down" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Abstract Visual -->
-                <div class="hidden lg:block relative">
-                    <div class="bg-slate-900 border border-slate-800 rounded-[2rem] p-8 shadow-2xl relative">
-                        <div class="flex justify-between items-center mb-8 border-b border-slate-800 pb-4 text-xs text-slate-500">
-                            <div class="flex gap-2">
-                                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
-                            </div>
-                            <span>performance_metrics.sh</span>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex justify-between items-center">
-                                <span class="text-slate-400">Total Reach</span>
-                                <span class="text-orange-500 font-black">1.2M+</span>
-                            </div>
-                            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex justify-between items-center">
-                                <span class="text-slate-400">Lead Conversion</span>
-                                <span class="text-green-500 font-black">18.4%</span>
-                            </div>
-                            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex justify-between items-center">
-                                <span class="text-slate-400">Campaigns Live</span>
-                                <span class="text-blue-500 font-black">42</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Marquee -->
-    <div class="bg-orange-600 py-3 overflow-hidden transform -skew-y-1">
-        <div class="animate-marquee">
-            <div class="flex items-center px-4">
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Telegram Ads</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Channel Growth</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Lead Generation</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">ROI Experts</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Telegram Ads</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Channel Growth</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Lead Generation</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">ROI Experts</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Services Section -->
-    <section id="solutions" class="py-24 px-4 bg-slate-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16 text-center lg:text-left">
-                <h2 class="text-orange-600 font-black uppercase tracking-widest text-xs mb-3">Our Core Expertise</h2>
-                <h3 class="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">Specialized Services</h3>
-                <p class="text-slate-500 mt-4 max-w-2xl">Proven marketing systems tailored for high-potential industries.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Forex Market -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-orange-600 group-hover:text-white">
-                        <i data-lucide="dollar-sign"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Forex Market</h4>
-                    <p class="text-sm text-slate-500">Strategic ads targeting serious traders and investors globally.</p>
-                </div>
-
-                <!-- Binary Trading -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-blue-600 group-hover:text-white">
-                        <i data-lucide="activity"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Binary Trading</h4>
-                    <p class="text-sm text-slate-500">High-intent lead generation for binary signal and platform providers.</p>
-                </div>
-
-                <!-- Stock Market -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-green-600 group-hover:text-white">
-                        <i data-lucide="bar-chart-2"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Stock Market</h4>
-                    <p class="text-sm text-slate-500">Connecting stock analysis channels with premium equity investors.</p>
-                </div>
-
-                <!-- Crypto Trading -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-purple-600 group-hover:text-white">
-                        <i data-lucide="zap"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Crypto Trading</h4>
-                    <p class="text-sm text-slate-500">Blockchain-focused marketing for tokens, exchanges, and signals.</p>
-                </div>
-
-                <!-- Real Estate Business -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-amber-600 group-hover:text-white">
-                        <i data-lucide="home"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Real Estate</h4>
-                    <p class="text-sm text-slate-500">Targeted lead acquisition for property sales and investment firms.</p>
-                </div>
-
-                <!-- E-commerce -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
-                        <i data-lucide="shopping-cart"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">E-commerce</h4>
-                    <p class="text-sm text-slate-500">Scaling online stores with direct-to-consumer Telegram funnels.</p>
-                </div>
-
-                <!-- Digital Product -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-cyan-600 group-hover:text-white">
-                        <i data-lucide="smartphone"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Digital Product</h4>
-                    <p class="text-sm text-slate-500">Promoting SaaS, courses, and software with high-ROI campaigns.</p>
-                </div>
-
-                <!-- Colour Trading -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-pink-600 group-hover:text-white">
-                        <i data-lucide="palette"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Colour Trading</h4>
-                    <p class="text-sm text-slate-500">Niche marketing strategies for prediction and analysis groups.</p>
-                </div>
-
-                <!-- Satka Matka -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-red-100 text-red-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-red-600 group-hover:text-white">
-                        <i data-lucide="dices"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Satka Matka</h4>
-                    <p class="text-sm text-slate-500">Specialized reach for gaming analysis and prediction services.</p>
-                </div>
-
-                <!-- LANDING PAGE -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-900 flex items-center justify-center mb-6 transition-colors group-hover:bg-slate-900 group-hover:text-white">
-                        <i data-lucide="layout"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Landing Page</h4>
-                    <p class="text-sm text-slate-500">High-conversion landing pages built to maximize Telegram lead flow.</p>
-                </div>
-
-                <!-- And Many More -->
-                <div class="service-card group bg-gradient-to-br from-orange-500 to-red-600 p-8 rounded-3xl shadow-xl transition-all duration-300 flex flex-col justify-center items-center text-center text-white">
-                    <i data-lucide="plus-circle" class="w-12 h-12 mb-4 animate-bounce"></i>
-                    <h4 class="text-xl font-black uppercase tracking-tight">And Many More</h4>
-                    <p class="text-sm text-white/80 mt-2">Custom solutions for any niche you target.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 px-4 bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h3 class="text-4xl font-black mb-4">Transparent Pricing</h3>
-            <p class="text-slate-500 mb-16">Choose the plan that fits your scaling needs.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 15 Days -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 text-left hover:border-orange-200 transition-all">
-                    <h4 class="text-xl font-bold mb-2">Basic Ads Plan</h4>
-                    <div class="text-4xl font-black mb-6">₹6,500 <span class="text-sm text-slate-400 font-normal">/15 days</span></div>
-                    <ul class="space-y-4 mb-8 text-slate-600 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> Setup Fee Included</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> Audience Research</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> Performance Reporting</li>
-                    </ul>
-                    <a href="https://t.me/+DP5QVdiG5nJiOWZl" target="_blank" class="block w-full text-center py-4 bg-white border border-slate-200 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition-all">Get Started</a>
-                </div>
-                <!-- 30 Days (Highlight) -->
-                <div class="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl scale-105 z-10 text-left relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Recommended</div>
-                    <h4 class="text-xl font-bold mb-2">Growth Plan</h4>
-                    <div class="text-4xl font-black mb-6">₹10,000 <span class="text-sm text-slate-500 font-normal">/30 days</span></div>
-                    <ul class="space-y-4 mb-8 text-slate-300 text-sm">
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> Advanced Pixel Tracking</li>
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> A/B Creative Testing</li>
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> Weekly Strategy Consult</li>
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> Priority Optimization</li>
-                    </ul>
-                    <a href="https://t.me/+DP5QVdiG5nJiOWZl" target="_blank" class="block w-full text-center py-4 bg-orange-600 rounded-xl font-bold shadow-lg shadow-orange-900/40 hover:scale-[1.02] transition-all">Select Plan</a>
-                </div>
-                <!-- Custom -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 text-left hover:border-orange-200 transition-all">
-                    <h4 class="text-xl font-bold mb-2">Custom Strategy</h4>
-                    <div class="text-4xl font-black mb-6">Quote</div>
-                    <ul class="space-y-4 mb-8 text-slate-600 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> Multi-channel Campaigns</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> Custom API Integrations</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-orange-500"></i> White-glove Management</li>
-                    </ul>
-                    <a href="https://t.me/+DP5QVdiG5nJiOWZl" target="_blank" class="block w-full text-center py-4 bg-white border border-slate-200 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition-all">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-slate-50 border-t px-4">
-        <div class="max-w-3xl mx-auto">
-            <h3 class="text-3xl font-black text-center mb-12">Frequently Asked</h3>
-            <div class="space-y-4">
-                <div class="faq-item border border-slate-200 rounded-2xl bg-white overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 hover:bg-slate-50 transition-colors text-left font-bold">
-                        <span>How soon will I see results?</span>
-                        <i data-lucide="chevron-right" class="faq-chevron w-5 h-5 text-slate-400 transition-transform"></i>
-                    </button>
-                    <div class="faq-content bg-white px-6">
-                        <p class="text-slate-600 text-sm leading-relaxed pb-6">Initial results typically appear within 48-72 hours of campaign launch as the algorithm optimizes for your target audience.</p>
-                    </div>
-                </div>
-                <div class="faq-item border border-slate-200 rounded-2xl bg-white overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 hover:bg-slate-50 transition-colors text-left font-bold">
-                        <span>Do you handle ad creatives?</span>
-                        <i data-lucide="chevron-right" class="faq-chevron w-5 h-5 text-slate-400 transition-transform"></i>
-                    </button>
-                    <div class="faq-content bg-white px-6">
-                        <p class="text-slate-600 text-sm leading-relaxed pb-6">Yes, we provide high-converting ad copy and basic creative guidelines. Premium video/image creation can be added to any plan.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-950 py-16 text-slate-400 text-sm">
-        <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-16">
-                <div>
-                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
-                        <div class="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white"><i data-lucide="trending-up" class="w-5 h-5"></i></div>
-                        <span class="text-xl font-black text-white tracking-tight uppercase">KRISHNA THAKUR</span>
-                    </div>
-                    <p class="max-w-xs">Global Telegram Marketing Agency specializing in high-growth niches.</p>
-                </div>
-                <div class="flex gap-8">
-                    <a href="https://t.me/+DP5QVdiG5nJiOWZl" class="text-white hover:text-orange-500 font-bold transition-all">Telegram</a>
-                    <a href="#solutions" class="text-white hover:text-orange-500 font-bold transition-all">Services</a>
-                    <a href="#pricing" class="text-white hover:text-orange-500 font-bold transition-all">Plans</a>
-                </div>
-            </div>
-            <div class="border-t border-slate-900 pt-8 flex justify-between items-center flex-col md:flex-row gap-4">
-                <span>© 2024 Krishna Thakur Ads. All rights reserved.</span>
-                <span class="text-[10px] uppercase tracking-widest font-bold text-slate-600">Built for high performance</span>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Initialize Icons
-        lucide.createIcons();
-
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const isOpen = menu.classList.contains('translate-x-0');
-            if (isOpen) {
-                menu.classList.add('translate-x-full');
-                menu.classList.remove('translate-x-0');
-                document.body.style.overflow = 'unset';
-            } else {
-                menu.classList.remove('translate-x-full');
-                menu.classList.add('translate-x-0');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 20) {
-                nav.classList.add('py-4');
-                nav.classList.remove('py-6');
-            } else {
-                nav.classList.remove('py-4');
-                nav.classList.add('py-6');
-            }
-        });
-
-        // FAQ Toggle
-        function toggleFaq(btn) {
-            const item = btn.parentElement;
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
-        }
-    </script>
-
 
 </body></html>
