@@ -1,454 +1,688 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna Thakur | Market No. 1 Telegram Ads Service</title>
-    <!-- Tailwind CSS for styling -->
+    <title>VedKali Ayurveda | Premium Men's Intimate Wellness</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        ayurveda: {
+                            50: '#f2f8f5',
+                            100: '#e1efe6',
+                            200: '#c5dfd0',
+                            300: '#9bc6b0',
+                            400: '#6ba88c',
+                            500: '#4a8b6e',
+                            600: '#386f56',
+                            700: '#2f5947',
+                            800: '#274739',
+                            900: '#213a30',
+                            950: '#12221b',
+                        },
+                        gold: {
+                            300: '#ebd171',
+                            400: '#d4af37',
+                            500: '#b5952f',
+                            600: '#947822',
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(33, 58, 48, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(18, 34, 27, 0.95), rgba(33, 58, 48, 0.8)), url('https://images.unsplash.com/photo-1608285981628-984eb8db757e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        .leaf-pattern {
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M54.627 0l.83.83-54.627 54.627-.83-.83L54.627 0zM29.172 0l.83.83-29.172 29.172-.83-.83L29.172 0zM60 29.172l.83.83-29.172 29.172-.83-.83L60 29.172z" fill="%23c5dfd0" fill-opacity="0.2" fill-rule="evenodd"/%3E%3C/svg%3E');
         }
-        
-        .animate-marquee {
-            animation: marquee 25s linear infinite;
-            display: flex;
-            width: max-content;
+        .page-content { display: none; opacity: 0; }
+        .page-content.active { display: block; animation: fadeIn 0.5s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        .glass-nav {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .nav-link.active {
+            color: #d4af37 !important; /* Gold 400 */
         }
-
-        .hero-gradient {
-            background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent),
-                        radial-gradient(circle at bottom left, rgba(168, 85, 247, 0.1), transparent);
-        }
-        
-        .faq-content {
+        .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            transition: max-height 0.4s ease-out;
         }
-
-        .faq-item.active .faq-content {
-            max-height: 200px;
-            padding-top: 1.5rem;
-        }
-
-        .faq-item.active .faq-chevron {
-            transform: rotate(90deg);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
+        .faq-answer.open {
+            max-height: 500px; /* Arbitrary large height */
         }
     </style>
 </head>
-<body class="text-slate-900 bg-slate-50 selection:bg-indigo-500 selection:text-white overflow-x-hidden">
-
-    <!-- WhatsApp FAB (Updated Link) -->
-    <div class="fixed bottom-6 right-6 z-50 group">
-        <a href="https://api.whatsapp.com/send?phone=919256268203&text=Hello%20Krishna%20!" target="_blank" class="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-4 shadow-2xl hover:shadow-green-500/40 transition-all duration-300 flex items-center gap-3 active:scale-95 ring-4 ring-white/20 backdrop-blur-sm">
-            <!-- WhatsApp SVG Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
-            </svg>
-            <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap font-bold">Message Now</span>
-        </a>
-    </div>
+<body class="font-sans text-gray-800 antialiased bg-white selection:bg-ayurveda-300 selection:text-ayurveda-900">
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-40 transition-all duration-500 py-6">
+    <nav class="fixed w-full z-50 bg-ayurveda-950/95 backdrop-blur-md border-b border-ayurveda-800 transition-all duration-300 shadow-sm" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-nav rounded-2xl px-6 py-4 flex justify-between items-center">
+            <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="flex items-center gap-3 cursor-pointer">
-                    <!-- Changed gradient to indigo/purple -->
-                    <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                        <i data-lucide="trending-up" class="text-white w-6 h-6"></i>
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer group" onclick="showPage('home')">
+                    <div class="w-10 h-10 border border-gold-400/30 rounded-full flex items-center justify-center text-gold-400 group-hover:bg-gold-400/10 transition-colors">
+                        <i data-lucide="leaf" class="w-5 h-5"></i>
                     </div>
-                    <span class="font-black text-xl leading-none text-white tracking-tight uppercase">KRISHNA THAKUR</span>
+                    <span class="font-serif font-bold text-2xl text-white tracking-wide">VedKali<span class="text-gold-400 ml-0.5 text-xl font-sans uppercase tracking-[0.2em]">Ayurveda</span></span>
                 </div>
 
-                <!-- Desktop Nav -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#solutions" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Solutions</a>
-                    <a href="#pricing" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Pricing</a>
-                    <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
-                    <div class="h-6 w-px bg-slate-700 mx-2"></div>
-                    <a href="https://api.whatsapp.com/send?phone=919256268203&text=Hello%20Krishna%20!" target="_blank" class="bg-white text-slate-900 px-6 py-2.5 rounded-xl text-sm font-bold transition-all hover:bg-indigo-50 hover:scale-105 active:scale-95">
-                        WhatsApp Now
-                    </a>
+                <!-- Desktop Links -->
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <button onclick="showPage('home')" class="nav-btn text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Home</button>
+                    <button onclick="showPage('about')" class="nav-btn text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">About Clinic</button>
+                    <button onclick="showPage('products')" class="nav-btn text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Treatments</button>
+                    <button onclick="showPage('herbs')" class="nav-btn text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Herb Glossary</button>
+                    <button onclick="showPage('faq')" class="nav-btn text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">FAQ</button>
+                    <button onclick="showPage('consult')" class="bg-gold-500 hover:bg-gold-400 text-white px-6 py-2.5 rounded-sm font-semibold text-sm transition-all shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+                        Book Consultation
+                    </button>
                 </div>
 
-                <!-- Mobile Toggle -->
-                <button onclick="toggleMenu()" class="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors">
-                    <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
-                </button>
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gold-400 hover:text-white transition-colors">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-ayurveda-950 border-t border-ayurveda-800 absolute w-full shadow-2xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <button onclick="showPage('home')" class="nav-btn-mob block w-full text-left px-4 py-3 text-base font-medium text-gray-300 hover:bg-ayurveda-900 hover:text-gold-400 rounded-md">Home</button>
+                <button onclick="showPage('about')" class="nav-btn-mob block w-full text-left px-4 py-3 text-base font-medium text-gray-300 hover:bg-ayurveda-900 hover:text-gold-400 rounded-md">About Clinic</button>
+                <button onclick="showPage('products')" class="nav-btn-mob block w-full text-left px-4 py-3 text-base font-medium text-gray-300 hover:bg-ayurveda-900 hover:text-gold-400 rounded-md">Treatments</button>
+                <button onclick="showPage('herbs')" class="nav-btn-mob block w-full text-left px-4 py-3 text-base font-medium text-gray-300 hover:bg-ayurveda-900 hover:text-gold-400 rounded-md">Herb Glossary</button>
+                <button onclick="showPage('faq')" class="nav-btn-mob block w-full text-left px-4 py-3 text-base font-medium text-gray-300 hover:bg-ayurveda-900 hover:text-gold-400 rounded-md">FAQ</button>
+                <button onclick="showPage('consult')" class="block w-full text-center mt-4 bg-gold-500 text-white px-4 py-3 rounded-sm font-bold shadow-md">Book Private Consultation</button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Sidebar -->
-    <div id="mobile-menu" class="fixed inset-0 z-50 bg-slate-950 transition-transform duration-500 lg:hidden translate-x-full">
-        <div class="flex flex-col h-full p-8">
-            <div class="flex justify-between items-center mb-16">
-                <span class="font-black text-2xl tracking-tighter text-white uppercase">KRISHNA THAKUR</span>
-                <button onclick="toggleMenu()" class="p-2 text-slate-400 hover:text-white">
-                    <i data-lucide="x" class="w-8 h-8"></i>
-                </button>
-            </div>
-            <div class="space-y-6 flex-1 text-white">
-                <a href="#solutions" onclick="toggleMenu()" class="block text-3xl font-bold text-slate-400 hover:text-white py-4 border-b border-slate-800">Solutions</a>
-                <a href="#pricing" onclick="toggleMenu()" class="block text-3xl font-bold text-slate-400 hover:text-white py-4 border-b border-slate-800">Pricing</a>
-                <a href="#faq" onclick="toggleMenu()" class="block text-3xl font-bold text-slate-400 hover:text-white py-4 border-b border-slate-800">FAQ</a>
-            </div>
-            <a href="https://api.whatsapp.com/send?phone=919256268203&text=Hello%20Krishna%20!" target="_blank" class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 py-4 rounded-xl font-bold text-white text-center shadow-lg shadow-indigo-900/50">
-                Start Your Growth
-            </a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-32 pb-20 bg-slate-950 overflow-hidden hero-gradient">
-        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center lg:text-left">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <!-- Updated Badge Colors -->
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 mb-8">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                        </span>
-                        <span class="text-[11px] font-bold uppercase tracking-widest">Active & Delivering Results</span>
-                    </div>
-                    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-8">
-                        Market Number No.1<br>
-                        <!-- Updated Gradient Text -->
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-indigo-500 to-purple-500">Telegram Ads Expert</span>
-                    </h1>
-                    <p class="text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
-                        Specialized Telegram marketing for high-risk and high-growth sectors. We scale your brand where others fail.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-16">
-                        <!-- UPDATED BUTTON: Green, Message Now text, new link -->
-                        <a href="https://api.whatsapp.com/send?phone=919256268203&text=Hello%20Krishna%20!" target="_blank" class="px-8 py-4 bg-[#25D366] text-white font-bold rounded-full hover:scale-105 transition-all shadow-lg shadow-green-500/30 flex items-center justify-center gap-2">
-                            Message Now <i data-lucide="message-circle" class="w-4 h-4"></i>
-                        </a>
-                        <a href="#solutions" class="px-8 py-4 bg-white/5 text-white font-bold rounded-full hover:bg-white/10 transition-all border border-white/10 flex items-center justify-center gap-2">
-                            View Services <i data-lucide="chevron-down" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Abstract Visual -->
-                <div class="hidden lg:block relative">
-                    <div class="bg-slate-900 border border-slate-800 rounded-[2rem] p-8 shadow-2xl relative">
-                        <div class="flex justify-between items-center mb-8 border-b border-slate-800 pb-4 text-xs text-slate-500">
-                            <div class="flex gap-2">
-                                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
-                            </div>
-                            <span>performance_metrics.sh</span>
+    <!-- PAGE 1: HOME -->
+    <main id="home-page" class="page-content active">
+        <!-- Hero Section -->
+        <section class="hero-bg min-h-screen flex items-center pt-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 lg:py-32">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-ayurveda-900/50 backdrop-blur-md border border-gold-400/30 text-gold-300 mb-8">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            <span class="text-xs font-bold uppercase tracking-widest">100% Confidential & Secure</span>
                         </div>
-                        <div class="space-y-4">
-                            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex justify-between items-center">
-                                <span class="text-slate-400">Total Reach</span>
-                                <span class="text-indigo-500 font-black">1.2M+</span>
-                            </div>
-                            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex justify-between items-center">
-                                <span class="text-slate-400">Lead Conversion</span>
-                                <span class="text-green-500 font-black">18.4%</span>
-                            </div>
-                            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex justify-between items-center">
-                                <span class="text-slate-400">Campaigns Live</span>
-                                <span class="text-blue-500 font-black">42</span>
-                            </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6 drop-shadow-lg">
+                            Master Your <br><span class="text-gold-400 italic font-medium">Vitality.</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-xl font-light leading-relaxed">
+                            Clinically formulated Ayurvedic therapies for men. Reclaim your endurance, strength, and confidence with 5000-year-old botanical science—with zero side effects.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-5">
+                            <button onclick="showPage('consult')" class="bg-gold-500 hover:bg-gold-400 text-white px-8 py-4 rounded-sm font-bold tracking-wide transition-all shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 group">
+                                Start Free Assessment <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                            <button onclick="showPage('products')" class="bg-transparent hover:bg-white/5 border border-white/20 text-white px-8 py-4 rounded-sm font-medium tracking-wide transition-all flex items-center justify-center">
+                                View Our Protocols
+                            </button>
+                        </div>
+                        
+                        <!-- Mini Trust Bar -->
+                        <div class="mt-12 flex items-center gap-6 text-sm text-gray-400">
+                            <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> GMP Certified</div>
+                            <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> 100% Plant-Based</div>
+                            <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> No Prescriptions</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Marquee: Updated color -->
-    <div class="bg-indigo-600 py-3 overflow-hidden transform -skew-y-1">
-        <div class="animate-marquee">
-            <div class="flex items-center px-4">
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Telegram Ads</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Channel Growth</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Lead Generation</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">ROI Experts</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Telegram Ads</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Channel Growth</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">Lead Generation</span>
-                <span class="text-white font-black text-sm uppercase tracking-widest mx-8">ROI Experts</span>
+        <!-- The VedKali Method -->
+        <section class="py-24 bg-ayurveda-50 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase mb-3">Our Methodology</h2>
+                    <h3 class="text-3xl md:text-5xl font-serif font-bold text-ayurveda-950 mb-6">Healing at the Root Cause</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">Modern stress, diet, and age deplete natural testosterone and restrict blood flow. We don't use temporary chemical fixes; we rebuild your systemic health.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="bg-white p-10 rounded-xl shadow-premium border border-ayurveda-100 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-ayurveda-100 rounded-full flex items-center justify-center text-ayurveda-700 mb-6">
+                            <i data-lucide="lock" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-ayurveda-900 mb-3">1. Complete Privacy</h4>
+                        <p class="text-gray-600 leading-relaxed">From consultation to delivery, absolute discretion is maintained. Unmarked billing and plain brown box packaging.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-xl shadow-premium border border-ayurveda-100 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-ayurveda-100 rounded-full flex items-center justify-center text-ayurveda-700 mb-6">
+                            <i data-lucide="microscope" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-ayurveda-900 mb-3">2. Clinical Ayurveda</h4>
+                        <p class="text-gray-600 leading-relaxed">We combine ancient texts with modern extraction techniques. Bhasmas (calcined minerals) and high-potency herbal extracts.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-xl shadow-premium border border-ayurveda-100 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-ayurveda-100 rounded-full flex items-center justify-center text-ayurveda-700 mb-6">
+                            <i data-lucide="activity" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-ayurveda-900 mb-3">3. Permanent Results</h4>
+                        <p class="text-gray-600 leading-relaxed">By healing the nervous system and vascular pathways over 30-90 days, you achieve sustained stamina without daily dependency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Herbs Teaser -->
+        <section class="py-24 bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-ayurveda-950 mb-4">The Power of Over 50 Rare Botanicals</h2>
+                        <p class="text-gray-600 text-lg">Our formulations utilize a massive spectrum of nature's most potent aphrodisiacs and adaptogens. Sourced from the Himalayas and deep forests of India.</p>
+                    </div>
+                    <button onclick="showPage('herbs')" class="mt-6 md:mt-0 text-gold-600 font-bold hover:text-gold-500 flex items-center gap-2 border-b-2 border-gold-300 pb-1">
+                        Explore Full Glossary <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+                <!-- Mini Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg text-center border border-gray-100 hover:border-ayurveda-300 transition-colors">
+                        <span class="block font-bold text-ayurveda-900">Ashwagandha</span><span class="text-xs text-gray-500 italic">Withania somnifera</span>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center border border-gray-100 hover:border-ayurveda-300 transition-colors">
+                        <span class="block font-bold text-ayurveda-900">Shilajit</span><span class="text-xs text-gray-500 italic">Asphaltum</span>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center border border-gray-100 hover:border-ayurveda-300 transition-colors">
+                        <span class="block font-bold text-ayurveda-900">Safed Musli</span><span class="text-xs text-gray-500 italic">Chlorophytum</span>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center border border-gray-100 hover:border-ayurveda-300 transition-colors">
+                        <span class="block font-bold text-ayurveda-900">Kaunch Beej</span><span class="text-xs text-gray-500 italic">Mucuna pruriens</span>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center border border-gray-100 hover:border-ayurveda-300 transition-colors hidden md:block">
+                        <span class="block font-bold text-ayurveda-900">Gokshura</span><span class="text-xs text-gray-500 italic">Tribulus terrestris</span>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center border border-gray-100 hover:border-ayurveda-300 transition-colors hidden lg:block">
+                        <span class="block font-bold text-ayurveda-900">Swarna Bhasma</span><span class="text-xs text-gray-500 italic">Gold Calx</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-ayurveda-900 text-center px-4">
+            <h2 class="text-3xl font-serif font-bold text-white mb-6">Don't wait. Reclaim your prime today.</h2>
+            <button onclick="showPage('consult')" class="bg-white text-ayurveda-900 px-8 py-4 rounded-sm font-bold text-lg hover:bg-gold-50 transition-colors shadow-lg">
+                Speak to an Expert Confidentially
+            </button>
+        </section>
+    </main>
+
+    <!-- PAGE 2: ABOUT US -->
+    <main id="about-page" class="page-content pt-32 pb-24 leaf-pattern">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase mb-3">Our Legacy</h2>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-ayurveda-950 mb-6">Rooted in Wisdom, Validated by Science.</h1>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-ayurveda-100 mb-12">
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="w-full md:w-1/3">
+                        <div class="aspect-square bg-gray-200 rounded-xl overflow-hidden shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ayurvedic Clinic" class="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-2xl font-serif font-bold text-ayurveda-900 mb-4">The VedKali Philosophy</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Founded by a collective of third-generation Vaidyas (Ayurvedic Doctors), VedKali Ayurveda was born from a singular vision: to treat modern male intimate health issues without the dangerous side effects of synthetic pharmaceuticals.
+                        </p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            We specialize strictly in **Vajikarana Chikitsa**—the specialized branch of Ayurveda dedicated to aphrodisiacs, virility, and the improvement of progeny health. Our formulations are not simple supplements; they are potent medicinal grades.
+                        </p>
+                        <ul class="space-y-3 mt-6">
+                            <li class="flex items-center gap-3 text-ayurveda-800 font-medium"><i data-lucide="check" class="w-5 h-5 text-gold-500"></i> No Heavy Metal Toxicity (Strict Shodhana purification)</li>
+                            <li class="flex items-center gap-3 text-ayurveda-800 font-medium"><i data-lucide="check" class="w-5 h-5 text-gold-500"></i> Doctor Prescribed Dosages</li>
+                            <li class="flex items-center gap-3 text-ayurveda-800 font-medium"><i data-lucide="check" class="w-5 h-5 text-gold-500"></i> Sustainably Wild-Harvested Botanicals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-ayurveda-50 p-6 rounded-xl border border-ayurveda-100">
+                    <div class="text-3xl font-bold text-ayurveda-800 mb-1">15+</div>
+                    <div class="text-sm font-medium text-gray-500 uppercase tracking-wide">Years Exp.</div>
+                </div>
+                <div class="bg-ayurveda-50 p-6 rounded-xl border border-ayurveda-100">
+                    <div class="text-3xl font-bold text-ayurveda-800 mb-1">20k+</div>
+                    <div class="text-sm font-medium text-gray-500 uppercase tracking-wide">Patients</div>
+                </div>
+                <div class="bg-ayurveda-50 p-6 rounded-xl border border-ayurveda-100">
+                    <div class="text-3xl font-bold text-ayurveda-800 mb-1">54</div>
+                    <div class="text-sm font-medium text-gray-500 uppercase tracking-wide">Potent Herbs</div>
+                </div>
+                <div class="bg-ayurveda-50 p-6 rounded-xl border border-ayurveda-100">
+                    <div class="text-3xl font-bold text-ayurveda-800 mb-1">94%</div>
+                    <div class="text-sm font-medium text-gray-500 uppercase tracking-wide">Success Rate</div>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- Services Section -->
-    <section id="solutions" class="py-24 px-4 bg-slate-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16 text-center lg:text-left">
-                <!-- Updated color -->
-                <h2 class="text-indigo-600 font-black uppercase tracking-widest text-xs mb-3">Our Core Expertise</h2>
-                <h3 class="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">Specialized Services</h3>
-                <p class="text-slate-500 mt-4 max-w-2xl">Proven marketing systems tailored for high-potential industries.</p>
+    <!-- PAGE 3: PRODUCTS / TREATMENTS -->
+    <main id="products-page" class="page-content pt-32 pb-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase mb-3">Vajikarana Formulations</h2>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-ayurveda-950 mb-6">Our Specialized Protocols</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Every treatment is custom-tailored to your dosha profile following your consultation. Below are our core medicinal kits.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col relative group">
+                    <div class="absolute top-4 left-4 bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-sm uppercase tracking-wider z-10">Premature Finish</div>
+                    <div class="h-64 bg-ayurveda-50 relative overflow-hidden flex items-center justify-center p-8">
+                        <div class="w-32 h-32 rounded-full bg-white/50 border-4 border-ayurveda-100 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform duration-500">
+                            <i data-lucide="timer" class="w-12 h-12 text-ayurveda-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-serif font-bold text-ayurveda-900 mb-2">Stamina Protocol (Delay)</h3>
+                        <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">A 30-day intensive course designed to desensitize the glans nerve endings while strengthening the pelvic floor. Calms performance anxiety naturally.</p>
+                        <div class="bg-gray-50 p-3 rounded text-xs text-gray-500 mb-6">
+                            <span class="font-bold text-gray-700">Key Herbs:</span> Ashwagandha, Jatamansi, Vacha, Safed Musli, Akarkara.
+                        </div>
+                        <button onclick="showPage('consult')" class="w-full bg-white text-ayurveda-900 border-2 border-ayurveda-900 py-3 rounded-sm font-bold hover:bg-ayurveda-900 hover:text-white transition-colors">
+                             Request Prescription
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 (Featured) -->
+                <div class="bg-ayurveda-900 text-white rounded-xl overflow-hidden shadow-2xl transform lg:-translate-y-4 border border-gold-400/30 flex flex-col relative">
+                    <div class="absolute top-4 left-4 bg-gold-500 text-white text-[10px] font-bold px-3 py-1 rounded-sm uppercase tracking-wider z-10 shadow-md">Best Seller / Gold Grade</div>
+                    <div class="h-64 bg-ayurveda-950 relative overflow-hidden flex items-center justify-center p-8">
+                        <!-- Abstract gold particles effect -->
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#d4af37 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        <div class="w-32 h-32 rounded-full bg-ayurveda-900 border-4 border-gold-500/50 flex items-center justify-center shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+                            <i data-lucide="zap" class="w-12 h-12 text-gold-400"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-serif font-bold text-gold-300 mb-2">Vajikarana Forte (Hardness)</h3>
+                        <p class="text-gray-300 mb-6 flex-1 text-sm leading-relaxed">Our most potent formulation for severe Erectile Dysfunction. Utilizes purified Gold and Silver ashes to forcefully dilate blood vessels and boost testosterone.</p>
+                        <div class="bg-ayurveda-800 p-3 rounded text-xs text-gray-300 mb-6 border border-ayurveda-700">
+                            <span class="font-bold text-gold-400">Key Herbs:</span> Swarna Bhasma (Gold), Pure Shilajit Resin, Gokshura, Kaunch, Makardhwaj.
+                        </div>
+                        <button onclick="showPage('consult')" class="w-full bg-gold-500 text-white py-3 rounded-sm font-bold shadow-lg hover:bg-gold-400 transition-colors">
+                             Request Prescription
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col relative group">
+                    <div class="absolute top-4 left-4 bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-sm uppercase tracking-wider z-10">Local Therapy</div>
+                    <div class="h-64 bg-ayurveda-50 relative overflow-hidden flex items-center justify-center p-8">
+                        <div class="w-32 h-32 rounded-full bg-white/50 border-4 border-ayurveda-100 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform duration-500">
+                            <i data-lucide="droplet" class="w-12 h-12 text-ayurveda-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-serif font-bold text-ayurveda-900 mb-2">T-Max Vitality Oil</h3>
+                        <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">A transdermal application oil crafted through the traditional Taila Paka Vidhi. Massaged locally, it directly stimulates the cavernous tissues for size and rigidity.</p>
+                        <div class="bg-gray-50 p-3 rounded text-xs text-gray-500 mb-6">
+                            <span class="font-bold text-gray-700">Key Herbs:</span> Malkangni, Jyotishmati, Jaiphal, Lavang, Sesame Oil Base.
+                        </div>
+                        <button onclick="showPage('consult')" class="w-full bg-white text-ayurveda-900 border-2 border-ayurveda-900 py-3 rounded-sm font-bold hover:bg-ayurveda-900 hover:text-white transition-colors">
+                             Request Prescription
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PAGE 4: HERB GLOSSARY (The 50+ Herbs) -->
+    <main id="herbs-page" class="page-content pt-32 pb-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase mb-3">Pharmacopeia</h2>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-ayurveda-950 mb-6">The 54 Herbs of Vajikarana</h1>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">We proudly maintain complete transparency regarding our formulations. Here is the comprehensive dictionary of the powerful adaptogens, rasayanas, and aphrodisiacs we employ.</p>
+            </div>
+
+            <!-- Herb Grid Container -->
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200 shadow-inner">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="herb-grid">
+                    <!-- Javascript will populate this to keep code clean, but I'll write the raw HTML array below to fulfill the 50+ requirement explicitly in the code. -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PAGE 5: FAQ -->
+    <main id="faq-page" class="page-content pt-32 pb-24 bg-ayurveda-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase mb-3">Support</h2>
+                <h1 class="text-4xl font-serif font-bold text-ayurveda-950 mb-6">Frequently Asked Questions</h1>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-ayurveda-900 flex justify-between items-center bg-white hover:bg-gray-50 transition-colors">
+                        <span>Is the packaging discreet?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 hidden">
+                        Absolutely. We understand the need for privacy. All orders are shipped in plain, unmarked brown boxes. The shipping label will only show "VedKali Wellness" without any mention of sexual health, treatments, or specific product names.
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-ayurveda-900 flex justify-between items-center bg-white hover:bg-gray-50 transition-colors">
+                        <span>Are there any side effects like headaches or palpitations?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 hidden">
+                        Unlike synthetic blue pills (Sildenafil/Tadalafil) which force artificial blood flow causing flushing, headaches, and rapid heart rate, Ayurvedic medicines work by naturally nourishing the nervous system and tissues (Dhatus). There are zero synthetic side effects.
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-ayurveda-900 flex justify-between items-center bg-white hover:bg-gray-50 transition-colors">
+                        <span>How long until I see results?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 hidden">
+                        Ayurveda treats the root cause, not just the symptom. You will start feeling an increase in energy and morning erections within 7-10 days. For permanent structural changes in stamina and hardness, a full course of 60 to 90 days is clinically recommended.
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-ayurveda-900 flex justify-between items-center bg-white hover:bg-gray-50 transition-colors">
+                        <span>Do I need a prescription?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 hidden">
+                        Because our treatments contain highly potent extracts and Bhasmas, we require a free online consultation before shipping. You fill out our confidential form, our Vaidya reviews your case, and approves the appropriate formulation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PAGE 6: CONSULTATION FORM -->
+    <main id="consult-page" class="page-content pt-32 pb-24 bg-white hero-bg" style="background-image: linear-gradient(rgba(18, 34, 27, 0.95), rgba(18, 34, 27, 0.95))">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+                <div class="bg-ayurveda-50 px-8 py-10 border-b border-ayurveda-100 text-center">
+                    <div class="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center text-white mx-auto mb-4 shadow-lg">
+                        <i data-lucide="stethoscope" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-3xl font-serif font-bold text-ayurveda-900 mb-2">Private Consultation Request</h2>
+                    <p class="text-sm text-gray-600">Your details are bound by medical confidentiality. No data is stored or shared.</p>
+                </div>
+                
+                <div class="p-8 md:p-12">
+                    <form id="wa-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">First Name (Or Alias)</label>
+                                <input type="text" id="form-name" required placeholder="Enter name" class="w-full px-4 py-3 rounded-sm bg-gray-50 border border-gray-200 focus:outline-none focus:border-ayurveda-500 focus:ring-1 focus:ring-ayurveda-500 transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Age</label>
+                                <input type="number" id="form-age" required min="18" max="90" placeholder="e.g. 35" class="w-full px-4 py-3 rounded-sm bg-gray-50 border border-gray-200 focus:outline-none focus:border-ayurveda-500 focus:ring-1 focus:ring-ayurveda-500 transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Primary Concern (Select one)</label>
+                            <select id="form-problem" class="w-full px-4 py-3 rounded-sm bg-gray-50 border border-gray-200 focus:outline-none focus:border-ayurveda-500 transition-all appearance-none cursor-pointer">
+                                <option value="Premature Ejaculation (Timing)">Premature Ejaculation (Timing issues)</option>
+                                <option value="Erectile Dysfunction (Hardness)">Erectile Dysfunction (Softness/Losing erection)</option>
+                                <option value="Low Libido (Desire)">Low Libido (Lack of desire)</option>
+                                <option value="Low Semen Volume/Quality">Low Semen Volume / Watery</option>
+                                <option value="General Weakness & Fatigue">General Physical Weakness & Fatigue</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Any underlying conditions? (Optional)</label>
+                            <input type="text" id="form-conditions" placeholder="e.g. Diabetes, Blood Pressure, None" class="w-full px-4 py-3 rounded-sm bg-gray-50 border border-gray-200 focus:outline-none focus:border-ayurveda-500 transition-all">
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-sm font-bold text-lg shadow-[0_4px_14px_0_rgba(22,163,74,0.39)] transition-all flex items-center justify-center gap-3">
+                                Connect Securely via WhatsApp <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </button>
+                            <p class="text-center text-[11px] text-gray-400 mt-4 leading-tight">By clicking submit, your default WhatsApp application will open with a pre-formatted message directed to our Head Vaidya. We respect your privacy.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ayurveda-950 text-gray-400 py-16 border-t border-ayurveda-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 border border-gold-400/30 rounded-full flex items-center justify-center text-gold-400">
+                        <i data-lucide="leaf" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-serif font-bold text-xl text-white tracking-wide">VedKali<span class="text-gold-400 ml-0.5 text-sm font-sans uppercase tracking-[0.2em]">Ayurveda</span></span>
+                </div>
+                <p class="text-sm leading-relaxed max-w-sm mb-6">Pioneering the modern application of ancient Vajikarana therapies. Rebuilding male vitality safely, privately, and permanently.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-ayurveda-900 flex items-center justify-center hover:bg-ayurveda-800 transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-ayurveda-900 flex items-center justify-center hover:bg-ayurveda-800 transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Forex Market - Updated Hover -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <!-- Updated Icon Colors -->
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
-                        <i data-lucide="dollar-sign"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Forex Market</h4>
-                    <p class="text-sm text-slate-500">Strategic ads targeting serious traders and investors globally.</p>
-                </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 tracking-wide text-sm uppercase">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><button onclick="showPage('about')" class="hover:text-gold-400 transition-colors">About the Clinic</button></li>
+                    <li><button onclick="showPage('products')" class="hover:text-gold-400 transition-colors">Our Treatments</button></li>
+                    <li><button onclick="showPage('herbs')" class="hover:text-gold-400 transition-colors">Herb Glossary</button></li>
+                    <li><button onclick="showPage('faq')" class="hover:text-gold-400 transition-colors">FAQ & Support</button></li>
+                </ul>
+            </div>
 
-                <!-- Binary Trading -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-blue-600 group-hover:text-white">
-                        <i data-lucide="activity"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Binary Trading</h4>
-                    <p class="text-sm text-slate-500">High-intent lead generation for binary signal and platform providers.</p>
-                </div>
-
-                <!-- Stock Market -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-green-600 group-hover:text-white">
-                        <i data-lucide="bar-chart-2"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Stock Market</h4>
-                    <p class="text-sm text-slate-500">Connecting stock analysis channels with premium equity investors.</p>
-                </div>
-
-                <!-- Crypto Trading -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-purple-600 group-hover:text-white">
-                        <i data-lucide="zap"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Crypto Trading</h4>
-                    <p class="text-sm text-slate-500">Blockchain-focused marketing for tokens, exchanges, and signals.</p>
-                </div>
-
-                <!-- Real Estate Business -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-amber-600 group-hover:text-white">
-                        <i data-lucide="home"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Real Estate</h4>
-                    <p class="text-sm text-slate-500">Targeted lead acquisition for property sales and investment firms.</p>
-                </div>
-
-                <!-- E-commerce -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
-                        <i data-lucide="shopping-cart"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">E-commerce</h4>
-                    <p class="text-sm text-slate-500">Scaling online stores with direct-to-consumer Telegram funnels.</p>
-                </div>
-
-                <!-- Digital Product -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-cyan-600 group-hover:text-white">
-                        <i data-lucide="smartphone"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Digital Product</h4>
-                    <p class="text-sm text-slate-500">Promoting SaaS, courses, and software with high-ROI campaigns.</p>
-                </div>
-
-                <!-- Colour Trading -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-pink-600 group-hover:text-white">
-                        <i data-lucide="palette"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Colour Trading</h4>
-                    <p class="text-sm text-slate-500">Niche marketing strategies for prediction and analysis groups.</p>
-                </div>
-
-                <!-- Satka Matka -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-red-100 text-red-600 flex items-center justify-center mb-6 transition-colors group-hover:bg-red-600 group-hover:text-white">
-                        <i data-lucide="dices"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Satka Matka</h4>
-                    <p class="text-sm text-slate-500">Specialized reach for gaming analysis and prediction services.</p>
-                </div>
-
-                <!-- LANDING PAGE -->
-                <div class="service-card group bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-900 flex items-center justify-center mb-6 transition-colors group-hover:bg-slate-900 group-hover:text-white">
-                        <i data-lucide="layout"></i>
-                    </div>
-                    <h4 class="text-lg font-black mb-2 uppercase tracking-tight">Landing Page</h4>
-                    <p class="text-sm text-slate-500">High-conversion landing pages built to maximize Telegram lead flow.</p>
-                </div>
-
-                <!-- And Many More -->
-                <div class="service-card group bg-gradient-to-br from-indigo-500 to-purple-600 p-8 rounded-3xl shadow-xl transition-all duration-300 flex flex-col justify-center items-center text-center text-white">
-                    <i data-lucide="plus-circle" class="w-12 h-12 mb-4 animate-bounce"></i>
-                    <h4 class="text-xl font-black uppercase tracking-tight">And Many More</h4>
-                    <p class="text-sm text-white/80 mt-2">Custom solutions for any niche you target.</p>
-                </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 tracking-wide text-sm uppercase">Contact</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-4 h-4 mt-0.5 text-ayurveda-600"></i> Headquarters: Kerala, India (Consultations Global)</li>
+                    <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-ayurveda-600"></i> +92 56268203</li>
+                    <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-ayurveda-600"></i> care@vedkali.com</li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 px-4 bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h3 class="text-4xl font-black mb-4">Transparent Pricing</h3>
-            <p class="text-slate-500 mb-16">Choose the plan that fits your scaling needs.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 15 Days -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 text-left hover:border-indigo-200 transition-all">
-                    <h4 class="text-xl font-bold mb-2">Basic Ads Plan</h4>
-                    <div class="text-4xl font-black mb-6">₹6,500 <span class="text-sm text-slate-400 font-normal">/15 days</span></div>
-                    <ul class="space-y-4 mb-8 text-slate-600 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> Setup Fee Included</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> Audience Research</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> Performance Reporting</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=919256268203&text=Hello%20Krishna%20!" target="_blank" class="block w-full text-center py-4 bg-white border border-slate-200 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition-all">Get Started</a>
-                </div>
-                <!-- 30 Days (Highlight) -->
-                <div class="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl scale-105 z-10 text-left relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Recommended</div>
-                    <h4 class="text-xl font-bold mb-2">Growth Plan</h4>
-                    <div class="text-4xl font-black mb-6">₹10,000 <span class="text-sm text-slate-500 font-normal">/30 days</span></div>
-                    <ul class="space-y-4 mb-8 text-slate-300 text-sm">
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> Advanced Pixel Tracking</li>
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> A/B Creative Testing</li>
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> Weekly Strategy Consult</li>
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> Priority Optimization</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=919256268203&text=Hello%20Krishna%20!" target="_blank" class="block w-full text-center py-4 bg-indigo-600 rounded-xl font-bold shadow-lg shadow-indigo-900/40 hover:scale-[1.02] transition-all">Select Plan</a>
-                </div>
-                <!-- Custom -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 text-left hover:border-indigo-200 transition-all">
-                    <h4 class="text-xl font-bold mb-2">Custom Strategy</h4>
-                    <div class="text-4xl font-black mb-6">Quote</div>
-                    <ul class="space-y-4 mb-8 text-slate-600 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> Multi-channel Campaigns</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> Custom API Integrations</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-500"></i> White-glove Management</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=919256268203&text=Hello%20Krishna%20!" target="_blank" class="block w-full text-center py-4 bg-white border border-slate-200 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition-all">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-slate-50 border-t px-4">
-        <div class="max-w-3xl mx-auto">
-            <h3 class="text-3xl font-black text-center mb-12">Frequently Asked</h3>
-            <div class="space-y-4">
-                <div class="faq-item border border-slate-200 rounded-2xl bg-white overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 hover:bg-slate-50 transition-colors text-left font-bold">
-                        <span>How soon will I see results?</span>
-                        <i data-lucide="chevron-right" class="faq-chevron w-5 h-5 text-slate-400 transition-transform"></i>
-                    </button>
-                    <div class="faq-content bg-white px-6">
-                        <p class="text-slate-600 text-sm leading-relaxed pb-6">Initial results typically appear within 48-72 hours of campaign launch as the algorithm optimizes for your target audience.</p>
-                    </div>
-                </div>
-                <div class="faq-item border border-slate-200 rounded-2xl bg-white overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 hover:bg-slate-50 transition-colors text-left font-bold">
-                        <span>Do you handle ad creatives?</span>
-                        <i data-lucide="chevron-right" class="faq-chevron w-5 h-5 text-slate-400 transition-transform"></i>
-                    </button>
-                    <div class="faq-content bg-white px-6">
-                        <p class="text-slate-600 text-sm leading-relaxed pb-6">Yes, we provide high-converting ad copy and basic creative guidelines. Premium video/image creation can be added to any plan.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer - UNTOUCHED AS REQUESTED -->
-    <footer class="bg-slate-950 py-16 text-slate-400 text-sm">
-        <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-16">
-                <div>
-                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
-                        <div class="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white"><i data-lucide="trending-up" class="w-5 h-5"></i></div>
-                        <span class="text-xl font-black text-white tracking-tight uppercase">KRISHNA THAKUR</span>
-                    </div>
-                    <p class="max-w-xs">Global Telegram Marketing Agency specializing in high-growth niches.</p>
-                </div>
-                <div class="flex gap-8">
-                    <a href="https://t.me/+DP5QVdiG5nJiOWZl" class="text-white hover:text-orange-500 font-bold transition-all">Telegram</a>
-                    <a href="#solutions" class="text-white hover:text-orange-500 font-bold transition-all">Services</a>
-                    <a href="#pricing" class="text-white hover:text-orange-500 font-bold transition-all">Plans</a>
-                </div>
-            </div>
-            <div class="border-t border-slate-900 pt-8 flex justify-between items-center flex-col md:flex-row gap-4">
-                <span>© 2024 Krishna Thakur Ads. All rights reserved.</span>
-                <span class="text-[10px] uppercase tracking-widest font-bold text-slate-600">Built for high performance</span>
-            </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-ayurveda-900 text-xs text-center md:text-left flex flex-col md:flex-row justify-between items-center text-ayurveda-600">
+            <p>&copy; 2026 VedKali Ayurveda. All Rights Reserved.</p>
+            <p class="mt-2 md:mt-0">Disclaimer: These statements have not been evaluated by the FDA. Products are not intended to diagnose, treat, cure, or prevent any disease.</p>
         </div>
     </footer>
+
+    <!-- Fixed WhatsApp Widget -->
+    <a href="https://wa.me/9256268203?text=Hello,%20I%20am%20looking%20for%20a%20private%20consultation." target="_blank" class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-[#1ebd5a] hover:-translate-y-1 transition-all group">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <span class="absolute right-full mr-4 bg-white text-gray-800 text-xs font-bold py-1 px-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat with Doctor</span>
+    </a>
 
     <script>
         // Initialize Icons
         lucide.createIcons();
 
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const isOpen = menu.classList.contains('translate-x-0');
-            if (isOpen) {
-                menu.classList.add('translate-x-full');
-                menu.classList.remove('translate-x-0');
-                document.body.style.overflow = 'unset';
-            } else {
-                menu.classList.remove('translate-x-full');
-                menu.classList.add('translate-x-0');
-                document.body.style.overflow = 'hidden';
-            }
+        // 54 Herbs Data
+        const herbsList = [
+            {name: "Ashwagandha", bot: "Withania somnifera", note: "Vitality & Stress"},
+            {name: "Shilajit", bot: "Asphaltum punjabianum", note: "Stamina & Minerals"},
+            {name: "Safed Musli", bot: "Chlorophytum borivilianum", note: "Testosterone booster"},
+            {name: "Gokshura", bot: "Tribulus terrestris", note: "Erectile tissue health"},
+            {name: "Kaunch Beej", bot: "Mucuna pruriens", note: "Dopamine & Mood"},
+            {name: "Shatavari", bot: "Asparagus racemosus", note: "Cooling rasayana"},
+            {name: "Vidarikand", bot: "Pueraria tuberosa", note: "Muscle strength"},
+            {name: "Akarkara", bot: "Anacyclus pyrethrum", note: "Nerve stimulation"},
+            {name: "Jaiphal", bot: "Myristica fragrans", note: "Prevents early finish"},
+            {name: "Javitri", bot: "Mace", note: "Enhances blood flow"},
+            {name: "Kesar", bot: "Crocus sativus", note: "Premium aphrodisiac"},
+            {name: "Lavang", bot: "Syzygium aromaticum", note: "Sensory control"},
+            {name: "Dalchini", bot: "Cinnamomum verum", note: "Circulation"},
+            {name: "Elaichi", bot: "Elettaria cardamomum", note: "Digestive fire"},
+            {name: "Brahmi", bot: "Bacopa monnieri", note: "Calms performance anxiety"},
+            {name: "Shankhpushpi", bot: "Convolvulus prostratus", note: "Mental clarity"},
+            {name: "Jatamansi", bot: "Nardostachys jatamansi", note: "Deep relaxation"},
+            {name: "Vacha", bot: "Acorus calamus", note: "Nervous system tonic"},
+            {name: "Giloy", bot: "Tinospora cordifolia", note: "Immunity base"},
+            {name: "Tulsi", bot: "Ocimum sanctum", note: "Adaptogen"},
+            {name: "Amla", bot: "Phyllanthus emblica", note: "Cellular youth"},
+            {name: "Haritaki", bot: "Terminalia chebula", note: "Detoxification"},
+            {name: "Baheda", bot: "Terminalia bellirica", note: "Rejuvenation"},
+            {name: "Guggul", bot: "Commiphora wightii", note: "Cholesterol & Flow"},
+            {name: "Salampanja", bot: "Dactylorhiza hatagirea", note: "Potent virility herb"},
+            {name: "Salam Mishri", bot: "Orchis mascula", note: "Semen quality"},
+            {name: "Talmakhana", bot: "Asteracantha longifolia", note: "Sperm count"},
+            {name: "Bala", bot: "Sida cordifolia", note: "Endurance"},
+            {name: "Atibala", bot: "Abutilon indicum", note: "Physical power"},
+            {name: "Nagbala", bot: "Grewia hirsuta", note: "Core strength"},
+            {name: "Kateri", bot: "Solanum surattense", note: "Respiratory & flow"},
+            {name: "Punarnava", bot: "Boerhavia diffusa", note: "Kidney function"},
+            {name: "Manjistha", bot: "Rubia cordifolia", note: "Blood purification"},
+            {name: "Neem", bot: "Azadirachta indica", note: "System cleanser"},
+            {name: "Haldi", bot: "Curcuma longa", note: "Anti-inflammatory"},
+            {name: "Daruhaldi", bot: "Berberis aristata", note: "Liver support"},
+            {name: "Pippali", bot: "Piper longum", note: "Bio-availability"},
+            {name: "Kali Mirch", bot: "Piper nigrum", note: "Absorption booster"},
+            {name: "Sonth", bot: "Zingiber officinale", note: "Metabolic fire"},
+            {name: "Malkangni", bot: "Celastrus paniculatus", note: "Local massage oil base"},
+            {name: "Jyotishmati", bot: "Celastrus", note: "Nerve strengthening"},
+            {name: "Ashoka", bot: "Saraca asoca", note: "Hormonal balance"},
+            {name: "Lodhra", bot: "Symplocos racemosa", note: "Astringent"},
+            {name: "Arjuna", bot: "Terminalia arjuna", note: "Heart & pumping capacity"},
+            {name: "Makardhwaj", bot: "Classical Formulation", note: "Ultimate strength"},
+            {name: "Vang Bhasma", bot: "Purified Tin", note: "Urogenital health"},
+            {name: "Yashad Bhasma", bot: "Purified Zinc", note: "Testosterone production"},
+            {name: "Swarna Bhasma", bot: "Purified Gold", note: "Supreme Rasayana"},
+            {name: "Rajat Bhasma", bot: "Purified Silver", note: "Nervine tonic"},
+            {name: "Abhrak Bhasma", bot: "Purified Mica", note: "Cellular energy"},
+            {name: "Shilajit Extract", bot: "Fulvic Acid Rich", note: "Mitochondrial power"},
+            {name: "Gokhru", bot: "Pedalium murex", note: "Urinary tract health"},
+            {name: "Bhringraj", bot: "Eclipta alba", note: "Rejuvenation"},
+            {name: "Kumari", bot: "Aloe barbadensis", note: "Cooling carrier"}
+        ];
+
+        // Populate Herbs Grid
+        const herbGrid = document.getElementById('herb-grid');
+        herbsList.forEach((herb, index) => {
+            const el = document.createElement('div');
+            el.className = "bg-white p-4 rounded border border-gray-100 hover:border-ayurveda-300 hover:shadow-md transition-all flex flex-col group";
+            el.innerHTML = `
+                <div class="flex items-start justify-between mb-1">
+                    <span class="font-bold text-ayurveda-900 group-hover:text-gold-600 transition-colors">${index + 1}. ${herb.name}</span>
+                    <i data-lucide="leaf" class="w-3 h-3 text-ayurveda-200 mt-1"></i>
+                </div>
+                <span class="text-[10px] text-gray-400 italic mb-2">${herb.bot}</span>
+                <span class="text-xs text-gray-600 border-t border-gray-50 pt-2 mt-auto">${herb.note}</span>
+            `;
+            herbGrid.appendChild(el);
+        });
+        lucide.createIcons(); // re-init icons for newly added elements
+
+        // Page Navigation Logic
+        function showPage(pageId) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId + '-page').classList.add('active');
+            window.scrollTo(0, 0);
+            
+            // Update Active Nav Styles
+            document.querySelectorAll('.nav-btn, .nav-btn-mob').forEach(btn => btn.classList.remove('active', 'text-gold-400'));
+            // Very simple way to match button text to pageId (not perfect, but works for this demo)
+            event && event.currentTarget && event.currentTarget.classList.add('text-gold-400');
+            
+            // Close mobile menu
+            document.getElementById('mobile-menu').classList.add('hidden');
         }
 
-        // Navbar Scroll Effect
+        // Initialize Home as active nav
+        document.querySelector('.nav-btn').classList.add('text-gold-400');
+
+        // Sticky Navbar Effect
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 20) {
-                nav.classList.add('py-4');
-                nav.classList.remove('py-6');
+                nav.classList.add('shadow-md');
+                nav.classList.remove('border-ayurveda-800');
             } else {
-                nav.classList.remove('py-4');
-                nav.classList.add('py-6');
+                nav.classList.remove('shadow-md');
+                nav.classList.add('border-ayurveda-800');
             }
         });
 
-        // FAQ Toggle
-        function toggleFaq(btn) {
-            const item = btn.parentElement;
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
-        }
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const answer = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Toggle open class
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                if(answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // WhatsApp Form Submission
+        const WA_NUMBER = "9256268203";
+        document.getElementById('wa-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const age = document.getElementById('form-age').value;
+            const problem = document.getElementById('form-problem').value;
+            const conditions = document.getElementById('form-conditions').value || "None";
+            
+            const message = `*CONFIDENTIAL CONSULTATION REQUEST*%0A%0A*Name:* ${name}%0A*Age:* ${age}%0A*Primary Concern:* ${problem}%0A*Underlying Conditions:* ${conditions}%0A%0AI would like to consult with the doctor securely.`;
+            
+            window.open(`https://wa.me/${WA_NUMBER}?text=${message}`, '_blank');
+        });
     </script>
-
-
-
-</body></html>
+</body>
+</html>
